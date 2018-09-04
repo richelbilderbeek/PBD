@@ -6,19 +6,19 @@
 diversification. This is a checked version with a more explicit interface
 than \code{\link{pbd_numspec_mean}}.}
 \usage{
-pbd_numspec_mean_checked(erg, eri, scr, sir, crown_age)
+pbd_numspec_mean_checked(ergs, eris, scrs, sirs, crown_ages)
 }
 \arguments{
-\item{erg}{extinction rate of a good species}
+\item{ergs}{one or more good species' extinction rates}
 
-\item{eri}{extinction rate of an incipient species}
+\item{eris}{one or more incipient species' extinction rates}
 
-\item{scr}{speciation completion rate}
+\item{scrs}{one or more speciation completion rates}
 
-\item{sir}{speciation initiation rate. This function assumes the
-speciation initiation rates of good and incipient species are equal.}
+\item{sirs}{one or more speciation initiation rates.
+This function assumes the speciation initiation rates of good and incipient species are equal.}
 
-\item{crown_age}{the crown age}
+\item{crown_ages}{one or more crown ages}
 }
 \value{
 The expected number of representative species
@@ -29,15 +29,32 @@ diversification. This is a checked version with a more explicit interface
 than \code{\link{pbd_numspec_mean}}.
 }
 \examples{
- mean_n_species <- pbd_numspec_mean_checked(
-   erg = 0.12,
-   eri = 0.23,
-   scr = 0.34,
-   sir = 0.45,
-   crown_age = 0.56
- )
- expected_mean_n_species <- 1.046121595
- testthat::expect_equal(mean_n_species, expected_mean_n_species)
+  n <- pbd_numspec_mean_checked(
+    ergs = 0.1,
+    eris = 0.2,
+    scrs = 0.3,
+    sirs = 0.4,
+    crown_ages = 0.5
+  )
+  testthat::expect_equal(n, 1.029111871)
+
+  n <- pbd_numspec_mean_checked(
+    ergs = 0.2,
+    eris = 0.4,
+    scrs = 0.6,
+    sirs = 0.8,
+    crown_ages = 1.0
+  )
+  testthat::expect_equal(n, 1.440746567)
+
+  # Vectorized use
+  ns <- pbd_numspec_mean_checked(
+    ergs = c(0.1, 0.2),
+    eris = c(0.2, 0.4),
+    scrs = c(0.3, 0.6),
+    sirs = c(0.4, 0.8),
+  )
+  testthat::expect_equal(ns, c(1.029111871, 1.440746567))
 }
 \seealso{
 \code{\link{pbd_numspec_mean}} provides for setting a time-dependence
