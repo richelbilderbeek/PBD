@@ -38,7 +38,7 @@ completion rate \cr \code{parsf[4]} corresponds to time-dependence of mu_2
 is 'lsoda'. See package deSolve for details.}
 }
 \value{
-The mean number of representative species
+The median number of representative species
 }
 \description{
 pbd_numspec_median computes the median number of species under the

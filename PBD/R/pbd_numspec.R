@@ -72,7 +72,6 @@ checkquantile <- function(quantile)
 #' @examples
 #' pbd_numspec_mean(pars = c(0.3,0.1,0.5,0.1), age = 10, soc = 2)
 #' @export pbd_numspec_mean
-
 pbd_numspec_mean <- function(
   pars,
   parsf = c(
@@ -169,7 +168,7 @@ pbd_numspec_quantile <- function(pars,parsf = c(function(t,pars) {pars[1]},funct
 #' (= mu_i in ER2012) = extinction rate of incipient species \cr \cr
 #' @param age the stem or crown age (see soc)
 #' @param soc specify whether it is the stem or the crown age
-#' @return The mean number of representative species
+#' @return The median number of representative species
 #' @param methode Sets which method should be used in the ode-solver. Default
 #' is 'lsoda'. See package deSolve for details.
 #' @author Rampal S. Etienne
