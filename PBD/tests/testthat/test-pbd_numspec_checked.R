@@ -101,6 +101,59 @@ test_that("pbd_numspec_mean_checked single-value abuse", {
   )
 })
 
+test_that("pbd_numspec_mean_checked test boundary", {
+
+  expect_silent(
+    pbd_numspec_mean_checked(
+      ergs = 0.0,
+      eris = 1.0,
+      scrs = 1.0,
+      sirs = 1.0,
+      crown_ages = 1.0
+    )
+  )
+
+  expect_silent(
+    pbd_numspec_mean_checked(
+      ergs = 1.0,
+      eris = 0.0,
+      scrs = 1.0,
+      sirs = 1.0,
+      crown_ages = 1.0
+    )
+  )
+
+  expect_silent(
+    pbd_numspec_mean_checked(
+      ergs = 1.0,
+      eris = 1.0,
+      scrs = 0.0,
+      sirs = 1.0,
+      crown_ages = 1.0
+    )
+  )
+
+  expect_silent(
+    pbd_numspec_mean_checked(
+      ergs = 1.0,
+      eris = 1.0,
+      scrs = 1.0,
+      sirs = 0.0,
+      crown_ages = 1.0
+    )
+  )
+
+  expect_silent(
+    pbd_numspec_mean_checked(
+      ergs = 1.0,
+      eris = 1.0,
+      scrs = 1.0,
+      sirs = 1.0,
+      crown_ages = 0.0
+    )
+  )
+})
+
 test_that("pbd_numspec_median_checked use", {
 
   expected <- pbd_numspec_median_checked(
