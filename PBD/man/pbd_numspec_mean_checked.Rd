@@ -53,6 +53,7 @@ than \code{\link{pbd_numspec_mean}}.
     eris = c(0.2, 0.4),
     scrs = c(0.3, 0.6),
     sirs = c(0.4, 0.8),
+    crown_ages = c(0.5, 1.0)
   )
   testthat::expect_equal(ns, c(1.029111871, 1.440746567))
 }
