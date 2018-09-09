@@ -37,7 +37,7 @@ than \code{\link{pbd_numspec_median}}.
     crown_age = 6.7
   )
   median_n_species_expected <- 99408712
-  expect_equal(median_n_species, median_n_species_expected)
+  testthat::expect_equal(median_n_species, median_n_species_expected)
 }
 \seealso{
 \code{\link{pbd_numspec_median}} provides for setting a time-dependence

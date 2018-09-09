@@ -134,7 +134,7 @@ pbd_numspec_mean_checked_impl <- function(
 #'     crown_age = 6.7
 #'   )
 #'   median_n_species_expected <- 99408712
-#'   expect_equal(median_n_species, median_n_species_expected)
+#'   testthat::expect_equal(median_n_species, median_n_species_expected)
 #' @author Richel J.C. Bilderbeek
 #' @export
 pbd_numspec_median_checked <- function(
