@@ -26,7 +26,7 @@ functions are constant functions of the parameters in pars1: \cr \cr
 Rosindell R2012) = speciation initiation rate \cr \code{pars1f[2]}
 corresponds to time-dependence of mu_1 (= mu_g in Etienne & Rosindell 2012)
 = extinction rate of good species \cr \code{pars1f[3]} corresponds to
-tiem-dependence of la_1 (= la_2 in Etienne & Rosindell 2012) = speciation
+time-dependence of la_1 (= la_2 in Etienne & Rosindell 2012) = speciation
 completion rate \cr \code{pars1f[4]} corresponds to time-dependence of mu_2
 (= mu_i in ER2012) = extinction rate of incipient species \cr \cr}
 
