@@ -6,7 +6,17 @@
 #'
 #' @param brts A set of branching times of a phylogeny, all positive
 #' @param initparsopt The initial values of the parameters that must be
-#' optimized
+#' optimized:
+#' \itemize{
+#'   \item initparsopt[1] = b (= la_1 in ER2012) =
+#'     speciation initiation rate
+#'   \item initparsopt[2] = mu_1 (= mu_g in ER2012) =
+#'     extinction rate of good species
+#'   \item initparsopt[3] = la_1 (= la_2 in ER2012) =
+#'     speciation completion rate
+#'   \item initparsopt[4] = mu_2 (= mu_i in ER2012) =
+#'     extinction rate of incipient species
+#' }
 #' @param idparsopt The ids of the parameters that must be optimized, e.g. 1:4
 #' for all parameters.  The ids are defined as follows: \cr id == 1 corresponds
 #' to b (speciation-initiation rate) \cr id == 2 corresponds to mu_1
